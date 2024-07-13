@@ -1,14 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class HomeScreen extends StatelessWidget{
+class DashboardScreen extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
-   return Scaffold(
-     body: Container(
+   return
+     Container(
          alignment : Alignment.center,
-         child: Text("Home Screen")),
-   );
+         child: Text("Home Screen"));
   }
 
 }
