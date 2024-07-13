@@ -23,15 +23,11 @@ class _FabtabsState extends State<Fabtabs> {
     setState(() {
       widget.selectedIndex = index;
       currentIndex = widget.selectedIndex;
-      print("current onItemTapped  selected: ${widget.selectedIndex}");
-      print("current onItemTapped  curreem: $currentIndex");
     });
 
   }
   @override
   void initState() {
-    print("current init current : $currentIndex");
-    print("current init selectedIndex : ${widget.selectedIndex}");
    onItemTapped(widget.selectedIndex);
     super.initState();
   }
@@ -49,10 +45,9 @@ class _FabtabsState extends State<Fabtabs> {
 
   @override
   Widget build(BuildContext context) {
-    print("current Index :$currentIndex");
     Widget currentScreen = currentIndex  == 0? HomePage() : currentIndex == 1 ?
     ProfileScreen() : currentIndex ==2 ? SettingsScreen() :  currentIndex ==3 ? ContactScreen() :HelpScreen();
-    print("current Screen :$currentScreen");
+
     return Scaffold(
       body: PageStorage(
         child: currentScreen,
